@@ -52,15 +52,6 @@ def main():
                         # default=["topcon_train_more_4_5"])
                         # default=["topcon_final_train"])
 
-    """
-       01_EYEPACS , "03_IDRID", "04_RFMid", "05_1000x39",
-                                               "06_EYENET", "07_LAG", "08_ODIR", "09_PAPILA", "10_PARAGUAY",
-                                               "11_STARE", "12_ARIA", "14_AGAR300", "15_APTOS", "16_FUND-OCT",
-                                               "17_DiaRetDB1", "18_DRIONS-DB", "19_Drishti-GS1",
-                                               "20_E-ophta", "21_G1020", "23_HRF", "24_ORIGA", "26_ROC",
-                                               "27_BRSET", "28_OIA-DDR", "29_AIROGS", "30_SUSTech-SYSU", "31_JICHI",
-                                               "32_CHAKSU", "33_DR1-2", "34_Cataract", "35_ScarDat"])
-    """
     parser.add_argument('--banned_categories', default=None)
 
     parser.add_argument('--out_path', default=PATH_RESULTS_PRETRAIN, help='output path')
