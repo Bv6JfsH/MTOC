@@ -13,20 +13,7 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import cv2
 
-transform_list = []
-transform_list.append(A.Resize(height=512, width=512))
-transform_list.append(A.HorizontalFlip(p=0.5))
-transform_list.append(A.Rotate(limit=(-90,90), p=0.5, border_mode=cv2.BORDER_CONSTANT, mask_value=0))
-transform_list.append(A.RandomResizedCrop(512, 512, scale=(0.25,1.0)))
-transform_list.append(
-    A.RandomBrightnessContrast(brightness_limit=0.2, contrast_limit=0.2, p=0.5))
-transform_list.append(A.HueSaturationValue(hue_shift_limit=20, sat_shift_limit=30,
-                                      val_shift_limit=20, p=0.5))
-transform_list.append(A.RandomGamma(gamma_limit=(80,120), p=0.3))
-transform_list.append(A.IAAAdditiveGaussianNoise(loc=0, scale=(2.5500000000000003, 12.75), p=0.5))
-transform_list.append(A.Normalize(mean=(0.5,0.5,0.5), std=(0.5,0.5,0.5)))
-transform_list.append(ToTensorV2())
-transforms_extra = A.Compose(transform_list)
+
 
 
 
