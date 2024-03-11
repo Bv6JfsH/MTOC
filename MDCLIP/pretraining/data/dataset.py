@@ -5,16 +5,12 @@
 
 import collections.abc
 import numpy as np
-
 from torch.utils.data import Dataset as _TorchDataset
 from typing import Any, Callable, Optional, Sequence, Union
 from torch.utils.data import Subset
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 import cv2
-
-
-
 class Dataset(_TorchDataset):
     """
     A generic data with a length property and an optional callable data transform
