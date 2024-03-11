@@ -21,8 +21,11 @@ transforms_eval = Compose([
     CopyDict(),
     LoadImage(),
     ImageScaling()])
+
+
+#Change your input of model_weight
 model_wight = "resnet_v2100text_0weights_0perfor_nomore4-5_0-1_newRep_odir_other_lesssampling53bestmAP.pth"
-#model_wight = "resnet_v2100text_0weights_10perfor_nomore4-5_0-1_newRep_odir_other_lesssampling52bestmAP.pth"
+
 
 model1 = MDCLIP_with_rep(vision_type='replknet', out_path="./local_data/results/pretraining/", from_checkpoint=True,
                     vision_pretrained=True, weights_path="./local_data/results/pretraining/"+model_wight

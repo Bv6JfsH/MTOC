@@ -26,7 +26,7 @@ def process(args):
     datalaoders = get_loader(dataframes_path=args.dataframes_path, data_root_path=args.data_root_path,
                              datasets=args.datasets, balance=args.balance, batch_size=args.batch_size,
                              num_workers=args.num_workers, banned_categories=args.banned_categories,
-                             caption=args.caption, augment_description=args.augment_description,data_val=["topcon_val_new"], data_test=["topcon_test_new"])
+                             caption=args.caption, augment_description=args.augment_description,data_val=["RFMid_Validation_other"], data_test=["RFMid_Testing_other"])
 
     model = MDCLIP_with_rep(vision_type=args.architecture, out_path=args.out_path, from_checkpoint=False, vision_pretrained=True
                             )
@@ -47,7 +47,7 @@ def main():
     # Folders, data, etc.
     parser.add_argument('--data_root_path', default=PATH_DATASETS)
     parser.add_argument('--dataframes_path', default=PATH_DATAFRAME_PRETRAIN)
-    parser.add_argument('--datasets',default=["topcon_final_train"])
+    parser.add_argument('--datasets',default=["RFMid_Training_other"])
     # parser.add_argument('--datasets', default=["RFMid_Training_other"])
                         # default=["topcon_train_more_4_5"])
                         # default=["topcon_final_train"])
