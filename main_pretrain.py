@@ -1,6 +1,6 @@
 
 """
-Main function to pretrain FLAIR model using
+Main function to pretrain MDCLIP model based on FLAIR using
 an assembly dataset and vision-text modalities.
 """
 import os
