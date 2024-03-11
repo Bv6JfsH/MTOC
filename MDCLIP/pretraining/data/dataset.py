@@ -15,8 +15,6 @@ import cv2
 
 
 
-
-
 class Dataset(_TorchDataset):
     """
     A generic data with a length property and an optional callable data transform
