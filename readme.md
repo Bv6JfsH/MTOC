@@ -1,4 +1,4 @@
-![Alt文本](model.jpg)
+![Alt文本](model.png)
 
 
 ---
